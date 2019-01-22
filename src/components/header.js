@@ -29,7 +29,7 @@ class Header extends Component {
     return (
       
       <Navbar fixed="top" light expand="sm">   
-      <div class="container"><NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
+      <div className="container"><NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
