@@ -5,12 +5,17 @@ import {
   CardText,
   CardSubtitle,
   CardBody,
+  Col  
+
 } from 'reactstrap'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 
-const Post = ({ title, author, slug, date, body, }) => (
-  <Card>
+const Post = ({ title, author, slug, date, body, fluid }) => (
+  <Col md="4">
+    <Card>
+        <Img className="card-image-top" fluid={fluid} />
        <CardBody>
       <CardTitle>
         <Link to={slug}>{title}</Link>
@@ -28,7 +33,8 @@ const Post = ({ title, author, slug, date, body, }) => (
         Read more
       </Link>
     </CardBody>
-  </Card>
+    </Card>
+    </Col>
 )
 
 export default Post
